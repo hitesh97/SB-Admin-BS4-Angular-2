@@ -57,7 +57,7 @@ $ npm start
 Default application server configuration
 
 ```javascript
-var PORT             = 8080;
+var PORT             = 8099;
 var LIVE_RELOAD_PORT = 4002;
 var APP_BASE         = '/';
 ```
