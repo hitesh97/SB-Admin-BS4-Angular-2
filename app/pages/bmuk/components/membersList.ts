@@ -12,3 +12,4 @@ export class MembersList {
 		this._router.navigate(['Home']);
 	}
 }
+
