@@ -11,35 +11,30 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class MemberService {
 
-    public todos$: Observable<Member[]>;
+    public members$: Observable<Member[]>;
+
     private _baseUrl: string;
-    private _todosObserver: Observer<Member[]>;
+    private _membersObserver: Observer<Member[]>;
+
     private _dataStore: {
-        todos: Member[]
+        members: Member[]
     };
 
+
     constructor(private _http: Http) {
-        console.log('Task Service created.');
         this._baseUrl = 'http://localhost/bmukapi/api/bmuk';
-        this._dataStore = { todos: [] };
-        this.todos$ = new Observable(observer => this._todosObserver = observer).share();
+        this._dataStore = { members: []};
+        this.members$ = new Observable(observer => this._membersObserver = observer).share();
     };
 
     getMembers() {
         this._http.get(`${this._baseUrl}/getheadmembers`).map(response => response.json()).subscribe(data => {
-            console.log(data);
-            this._dataStore.todos = data;
-            this._todosObserver.next(this._dataStore.todos);
-        }, error => console.log('Could not load todos.'));
+            this._dataStore.members = data;
+            this._membersObserver.next(this._dataStore.members);
+        }, error => console.log('Could not load members.'));
+    };
+
+    getMember(memberId: number) {
+        return this._http.get(`${this._baseUrl}/getmember/${memberId}`).map(response => response.json());
     };
 }
-
-//.map((tasks: Array<any>) => {
-//    let result: Array<Member> = [];
-//    if (tasks) {
-//        tasks.forEach((task) => {
-//            result.push(new Member(task.id, task.description, task.priority, task.dueDate, task.complete));
-//        });
-//    }
-//    return result;
-//})

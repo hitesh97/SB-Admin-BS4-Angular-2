@@ -15,6 +15,7 @@ import {ComponentCmp} from '../../../pages/component/components/component';
 import {TopNavCmp} from '../../../widgets/topnav/components/topnav';
 import {SidebarCmp} from '../../../widgets/sidebar/components/sidebar';
 import {MembersList} from '../../../pages/bmuk/components/MembersList';
+import {MemberDetails} from '../../../pages/bmuk/components/MemberDetails';
 
 @Component({
   selector: 'dashboard',
@@ -32,5 +33,6 @@ import {MembersList} from '../../../pages/bmuk/components/MembersList';
   { path: '/component', component: ComponentCmp, as: 'Component' },
   { path: '/blank-page', component: BlankPageCmp, as: 'BlankPage' },
   { path: '/listMembers', component: MembersList, as: 'ListMembers' },
+  { path: '/MemberDetails', component: MemberDetails, as: 'MemberDetails' }
 ])
 export class DashboardCmp { }
