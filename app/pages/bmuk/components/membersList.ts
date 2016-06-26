@@ -10,7 +10,12 @@ import {Search} from './Search';
     templateUrl: './pages/BMUK/components/MembersList.html',
     providers: [MemberService],
     bindings: [MemberService],
-    directives: [Search]
+    directives: [Search],
+        styles: [`
+    .icons {
+      cursor: pointer;
+      padding-right: 6px;
+    }`]
 })
 
 export class MembersList {
