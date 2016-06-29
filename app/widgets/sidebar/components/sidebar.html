@@ -6,15 +6,17 @@
         <a [routerLink]="['Home']" class="list-group-item">
             <i class="fa fa-fw fa-dashboard"></i> Dashboard
         </a>
+        <a [routerLink]="['Forms']"class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i> Forms
+        </a>
+        <!-- 
         <a [routerLink]="['Chart']"class="list-group-item">
             <i class="fa fa-fw fa-bar-chart-o"></i> Charts
         </a>
         <a [routerLink]="['Tables']"class="list-group-item">
             <i class="fa fa-fw fa-table"></i> Tables
         </a>
-        <a [routerLink]="['Forms']"class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i> Forms
-        </a>
+
         <a [routerLink]="['BSElement']" class="list-group-item">
             <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
         </a>
@@ -23,9 +25,9 @@
         </a>
         <a [routerLink]="['Component']" class="list-group-item">
             <i class="fa fa-th-list"></i> &nbsp;Component
-        </a>
+        </a>-->
         <!-- dropDown item -->
-        <div class="sidebar-dropdown">
+        <!-- <div class="sidebar-dropdown">
             <accordion>
                 <accordion-group heading='&#x21D5;&nbsp;&nbsp;Dropdown  &#x25BE;'>
                     <p>
@@ -43,14 +45,17 @@
         <a [routerLink]="['BlankPage']" class="list-group-item">
             <i class="fa fa-file-o"></i> &nbsp;BlankPage
         </a>
-        <a [routerLink]="['ListMembers']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i>List Members
-        </a>
-        <!-- <a [routerLink]="['/RTL-Dashboard']" class="list-group-item" (click)="eventCalled()">
+        <a [routerLink]="['/RTL-Dashboard']" class="list-group-item" (click)="eventCalled()">
             <i class="fa fa-fw fa-dashboard"></i> RTL Dashboard
-        </a> -->
+        </a>
         <a class="list-group-item more-themes" href="http://www.strapui.com/" >
             More Themes
-        </a>
+        </a> -->
+        <a [routerLink]="['ListMembers']" class="list-group-item">
+            <i class="fa fa-fw fa-edit"></i>List Members
+        </a>        
+        <a [routerLink]="['AddNewMember', { ParentMemberId: '-1' }]" class="list-group-item">
+            <i class="fa fa-user icons"></i>New head members
+        </a>    
     </ul>
 </nav>

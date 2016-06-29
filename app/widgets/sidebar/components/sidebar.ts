@@ -9,7 +9,12 @@ import {GridCmp} from '../../../pages/grid/components/grid';
 @Component({
 	selector: 'sidebar',
 	templateUrl: './widgets/sidebar/components/sidebar.html',
-	directives: [ROUTER_DIRECTIVES, ACCORDION_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES]
+	directives: [ROUTER_DIRECTIVES, ACCORDION_DIRECTIVES, CORE_DIRECTIVES, FORM_DIRECTIVES],
+	styles: [`
+    .icons {
+      cursor: pointer;
+      padding-right: 6px;
+    }`]
 })
 @RouteConfig([
 	{ path: '/grid', component: GridCmp, as: 'Grid' }

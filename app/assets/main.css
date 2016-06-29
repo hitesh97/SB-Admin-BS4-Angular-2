@@ -334,3 +334,63 @@ a:hover {
       color: rgba(255, 255, 255, 0.6) !important; }
   .login-page .form-content {
     padding: 40px 0; }
+
+.generic-form {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  background: #fff;
+  color: #222;
+  padding: 2em; }
+  .generic-form .input-lg {
+    height: 46px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 0; }
+  .generic-form .input-underline {
+    background: 0 0;
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    color: #000;
+    border-radius: 0; }
+  .generic-form .input-underline:focus {
+    border-bottom: 2px solid #000;
+    box-shadow: none; }
+  .generic-form .rounded-btn {
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    background: #222;
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    line-height: 40px;
+    padding: 0 25px; }
+  .generic-form .rounded-btn:hover, .generic-form .rounded-btn:focus, .generic-form .rounded-btn:active, .generic-form .rounded-btn:visited {
+    color: white;
+    border: 2px solid black;
+    outline: none; }
+  .generic-form h1 {
+    font-weight: 300;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px; }
+    .generic-form h1 small {
+      color: rgba(0, 0, 0, 0.7); }
+  .generic-form .form-group {
+    padding: 8px 0; }
+    .generic-form .form-group input::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.6) !important; }
+    .generic-form .form-group input:-moz-placeholder {
+      /* Firefox 18- */
+      color: rgba(0, 0, 0, 0.6) !important; }
+    .generic-form .form-group input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: rgba(0, 0, 0, 0.6) !important; }
+    .generic-form .form-group input:-ms-input-placeholder {
+      color: rgba(0, 0, 0, 0.6) !important; }
+  .generic-form .form-content {
+    padding: 40px 0; }
